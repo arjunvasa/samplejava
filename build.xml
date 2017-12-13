@@ -15,6 +15,10 @@
 
   <!-- Targets -->
 
+<target name="all" depends="resolve,compile,jar,run,run-hotswap,hotswap,clean,javadoc,format,tags,check,pmd,analyze,test-compile,test,bundle"
+                       description="Run all  tools."/>
+
+
   <target name="resolve" description="Retrieve dependencies with Ivy.">
     <ivy:resolve log="download-only"/>
     <ivy:cachepath conf="build" pathid="build.classpath"/>
